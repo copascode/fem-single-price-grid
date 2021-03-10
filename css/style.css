@@ -1,0 +1,145 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e5eff5;
+  line-height: 1.3;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.card {
+  margin: 4.375rem auto;
+  width: 19.5rem;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px -3px 15px #98a6bd;
+          box-shadow: 3px -3px 15px #98a6bd;
+}
+
+@media (min-width: 50.75rem) {
+  .card {
+    margin: 10.25rem auto;
+    width: 39.6875rem;
+    height: 100%;
+    -webkit-box-shadow: 3px -3px 15px #98a6bd;
+            box-shadow: 3px -3px 15px #98a6bd;
+  }
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "head head" "subscribtion subscribtion" "pros pros";
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 2fr 2fr 2fr;
+      grid-template-rows: 2fr 2fr 2fr;
+}
+
+.grid__head {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: head;
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.grid__head h2 {
+  color: #2ab2af;
+  font-weight: 700;
+}
+
+.grid__head h3 {
+  color: #c0df34;
+  font-weight: 700;
+}
+
+.grid__head p {
+  color: #98a6bd;
+}
+
+.grid__subscription {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: subscribtion;
+  background-color: #2ab2af;
+  font-weight: 700;
+  color: white;
+}
+
+.grid__subscription .dollar {
+  font-size: 1.625rem;
+}
+
+.grid__subscription .month {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.grid__subscription a {
+  display: inline-block;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  background-color: #c0df34;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.grid__pros {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: pros;
+  background-color: #2cbab8;
+  color: white;
+  font-weight: 400;
+  border-radius: 0 0 10px 10px;
+}
+
+.grid > * {
+  padding: 2.5rem;
+}
+
+@media (min-width: 50.75rem) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "head head" "subscribtion pros";
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 0.7fr 1fr;
+        grid-template-rows: 0.7fr 1fr;
+  }
+  .grid__subscription {
+    border-radius: 0 0 0 10px;
+  }
+  .grid__pros {
+    border-radius: 0 0 10px 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

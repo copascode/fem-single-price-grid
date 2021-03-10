@@ -1,0 +1,97 @@
+.card {
+  margin: 4.375rem auto;
+  width: 19.5rem;
+  // height: 45.25rem;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 3px -3px 15px $grayishblue;
+
+  @media (min-width: $minwidth) {
+    margin: 10.25rem auto;
+    width: 39.6875rem;
+    // height: 29.75rem;
+    height: 100%;
+    box-shadow: 3px -3px 15px $grayishblue;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: "head head" "subscribtion subscribtion" "pros pros";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 2fr 2fr;
+
+  &__head {
+    grid-area: head;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    h2 {
+      color: $cyan;
+      font-weight: $bold;
+    }
+
+    h3 {
+      color: $brightyellow;
+      font-weight: $bold;
+    }
+
+    p {
+      color: $grayishblue;
+    }
+  }
+
+  &__subscription {
+    grid-area: subscribtion;
+    background-color: $cyan;
+    font-weight: $bold;
+
+    color: white;
+
+    .dollar {
+      font-size: 1.625rem;
+    }
+
+    .month {
+      font-weight: $regular;
+      font-size: 1rem;
+    }
+
+    a {
+      display: inline-block;
+      padding: 1rem;
+      width: 100%;
+      border-radius: 5px;
+      color: white;
+      background-color: $brightyellow;
+      box-shadow: 3px 3px 10px rgba(black, 0.3);
+      text-align: center;
+    }
+  }
+
+  &__pros {
+    grid-area: pros;
+    background-color: lighten($cyan, 2%);
+    color: white;
+    font-weight: $regular;
+    border-radius: 0 0 10px 10px;
+  }
+
+  > * {
+    padding: 2.5rem;
+  }
+
+  @media (min-width: $minwidth) {
+    display: grid;
+    grid-template-areas: "head head" "subscribtion pros";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.7fr 1fr;
+
+    &__subscription {
+      border-radius: 0 0 0 10px;
+    }
+
+    &__pros {
+      border-radius: 0 0 10px 0;
+    }
+  }
+}
